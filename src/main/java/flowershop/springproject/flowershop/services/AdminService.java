@@ -18,8 +18,8 @@ public class AdminService implements CrudService<Admin> {
         this.adminRepository = adminRepository;
     }
 
-    Admin getAdminByFirstName(String firstName){
-        return adminRepository.getByFirstName(firstName);
+    public Admin getAdminByEmailAndPassword(String email, String password){
+        return adminRepository.findByEmailAndPassword(email, password);
     }
 
 
