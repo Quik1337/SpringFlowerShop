@@ -16,6 +16,8 @@ public class Flower {
     private String name;
     private String description;
     private BigDecimal price;
+    @Column(name = "PICTUREURL")
+    private String pictureUrl;
 
     public Flower() {
     }
@@ -52,5 +54,17 @@ public class Flower {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
     }
 }
