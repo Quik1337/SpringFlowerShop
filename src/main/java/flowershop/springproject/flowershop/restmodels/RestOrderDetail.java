@@ -5,6 +5,9 @@ public class RestOrderDetail {
     private Long flowerId;
     private int quantity;
 
+    public RestOrderDetail() {
+    }
+
     public RestOrderDetail(Long flowerId, int quantity) {
         this.flowerId = flowerId;
         this.quantity = quantity;

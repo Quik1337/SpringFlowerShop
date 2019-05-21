@@ -2,6 +2,8 @@ package flowershop.springproject.flowershop.restmodels;
 
 import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.models.OrderDetail;
+
+import java.util.HashSet;
 import java.util.Set;
 
 public class RestCustomerOrder {
@@ -9,23 +11,22 @@ public class RestCustomerOrder {
     private Long customerId;
     private Set<RestOrderDetail> restOrderDetails;
 
-    public RestCustomerOrder(Long customerId) {
-        this.customerId = customerId;
+    public RestCustomerOrder() {
     }
 
-    public Long getCustomer() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomer(Long customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
-    public Set<RestOrderDetail> getOrderDetails() {
+    public Set<RestOrderDetail> getRestOrderDetails() {
         return restOrderDetails;
     }
-    
-    public void setOrderDetails(Set<RestOrderDetail> orderDetails) {
-        this.restOrderDetails = orderDetails;
+
+    public void setRestOrderDetails(Set<RestOrderDetail> restOrderDetails) {
+        this.restOrderDetails = restOrderDetails;
     }
 }
