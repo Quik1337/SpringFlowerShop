@@ -28,6 +28,10 @@ public class CustomerService implements CrudService<Customer> {
         return customers;
     }
 
+    public Customer findByEmailAndPassword(String email, String password){
+        return customerRepository.findByEmailAndPassword(email, password);
+    }
+
     @Override
     public Customer add(Customer object) {
         return customerRepository.save(object);

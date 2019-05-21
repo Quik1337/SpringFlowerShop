@@ -34,6 +34,8 @@ public class Customer {
         this.premium = premium;
     }
 
+
+
     public Long getId() {
         return id;
     }
