@@ -3,6 +3,7 @@ package flowershop.springproject.flowershop.models;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,7 +21,7 @@ public class Order {
     private Customer customer;
 
     private BigDecimal totalPrice;
-    private Date orderDate;
+    private LocalDate orderDate;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "order")
     private Set<OrderDetail> orderDetails = new HashSet<>();
@@ -29,7 +30,7 @@ public class Order {
     public Order() {
     }
 
-    public Order(Customer customer, BigDecimal totalPrice, Date orderDate) {
+    public Order(Customer customer, BigDecimal totalPrice, LocalDate orderDate) {
         this.customer = customer;
         this.totalPrice = totalPrice;
         this.orderDate = orderDate;
@@ -51,16 +52,22 @@ public class Order {
         return totalPrice;
     }
 
+<<<<<<< HEAD
     public void setTotalPrice(Set<OrderDetail> totalPrice) {
          double result =
                  totalPrice.stream().map(e -> e.getFlower().getPrice()).mapToDouble(BigDecimal::doubleValue).sum();
+=======
+    public void setTotalPrice(Set<OrderDetail> orderDetails) {
+        this.totalPrice = new BigDecimal(orderDetails.stream()
+                .map(e -> e.getFlower().getPrice()).mapToDouble(BigDecimal::doubleValue).sum());
+>>>>>>> a530586be1b38a65044e332f754d09ea641fc2f2
     }
 
-    public Date getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
 

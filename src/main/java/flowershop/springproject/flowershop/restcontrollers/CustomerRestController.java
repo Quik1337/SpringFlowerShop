@@ -11,11 +11,8 @@ import java.util.Set;
 @RestController
 @RequestMapping("/customer")
 public class CustomerRestController {
-
-
-
+    
     private final CustomerService customerService;
-
 
     public CustomerRestController(CustomerService customerService) {
         this.customerService = customerService;
