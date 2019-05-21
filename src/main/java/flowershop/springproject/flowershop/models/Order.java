@@ -51,8 +51,9 @@ public class Order {
         return totalPrice;
     }
 
-    public void setTotalPrice(BigDecimal totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTotalPrice(Set<OrderDetail> totalPrice) {
+         double result =
+                 totalPrice.stream().map(e -> e.getFlower().getPrice()).mapToDouble(BigDecimal::doubleValue).sum();
     }
 
     public Date getOrderDate() {
