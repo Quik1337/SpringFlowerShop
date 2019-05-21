@@ -7,7 +7,7 @@ import java.util.Set;
 public class RestCustomerOrder {
     
     private Long customerId;
-    private Set<RestOrderDetail> orderDetails;
+    private Set<RestOrderDetail> restOrderDetails;
 
     public RestCustomerOrder(Long customerId) {
         this.customerId = customerId;
@@ -22,10 +22,10 @@ public class RestCustomerOrder {
     }
 
     public Set<RestOrderDetail> getOrderDetails() {
-        return orderDetails;
+        return restOrderDetails;
     }
     
     public void setOrderDetails(Set<RestOrderDetail> orderDetails) {
-        this.orderDetails = orderDetails;
+        this.restOrderDetails = orderDetails;
     }
 }

@@ -20,9 +20,9 @@ public class OrderRestController {
     }
     
     @PostMapping("createOrder")
-    public @ResponseBody RestCustomerOrder createOrder(@RequestBody RestCustomerOrder customerOrder) {
+    public @ResponseBody RestCustomerOrder createOrder(@RequestBody RestCustomerOrder restCustomerOrder) {
         
-        return customerOrder;
+        return restCustomerOrder;
         //orderLogic.addOrder(customerOrder);
     }
     
