@@ -21,20 +21,16 @@ public class CustomerRestController {
         this.customerService = customerService;
     }
 
-    @GetMapping("customers")
+    @GetMapping("getAllCustomers")
     private Set<Customer> getCustomers(){
         return customerService.getAll();
     }
-
-    @GetMapping("customerLogin")
-    private Customer customerLogin(@RequestParam(value="email") String email,
-                                   @RequestParam(value="password") String password){
-        return customerService.findByEmailAndPassword(email, password);
-    }
-
+    
     @PostMapping("createCustomer")
     private Customer customer(@RequestBody Customer customer){
         return customerService.add(customer);
     }
+
+    
 }
 

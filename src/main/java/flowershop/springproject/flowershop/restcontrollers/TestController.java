@@ -22,6 +22,8 @@ public class TestController {
 
     public void setUpDB(){
         Admin admin = new Admin();
+        admin.setEmail("david.sodergren@gmail.com");
+        admin.setPassword("123");
         adminService.add(admin);
         Customer customer = new Customer();
         customer.setEmail("adam.backstrom@gmail.com");
