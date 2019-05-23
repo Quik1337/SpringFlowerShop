@@ -20,9 +20,17 @@ VALUES('Adam', 'Backstrom', 'adamadmin@gmail.com', '123');
 
 
 INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
-VALUES('Pellargon', 'Beutiful flower that comes in many colours', 200, 'wwww.testurl.com');
+VALUES('Alocasia', 'Beutiful flower that comes in many colours', 200, 'Alocasia.jpg');
 INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
-VALUES('Elephant ear', 'Beutiful flower that comes with round and crispy leafs, this flower can also be ' ||
-  'eaten if you have a month with not so much money', 150, 'wwww.testurl.com');
+VALUES('Charmfull Orkide', 'Beutiful flower that comes with round and crispy leafs, this flower can also be ' ||
+  'eaten if you have a month with not so much money', 150, 'CharmfullOrkide.jpg');
 INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
-VALUES('Rose', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300, 'wwww.testurl.com');
+VALUES('Eukalyptus', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300, 'Eukalyptus.jpg');
+INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
+VALUES('Gron skonhet', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300, 'GronSkonhet.jpg');
+INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
+VALUES('Himmelsk Hortensia', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300, 'HimmelskHortensia.jpg');
+INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
+VALUES('Hortensia', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300, 'Hortensia.jpg');
+INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
+VALUES('Kryddigt gott', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300, 'KryddigtGott.jpg');
