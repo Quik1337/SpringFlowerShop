@@ -1,6 +1,7 @@
 package flowershop.springproject.flowershop.services;
 
 import flowershop.springproject.flowershop.models.Admin;
+import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.repositories.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,5 +39,9 @@ public class AdminService implements CrudService<Admin> {
     @Override
     public Admin add(Admin object) {
         return adminRepository.save(object);
+    }
+
+    public Admin findByEmailAndPassword(String email, String password){
+        return adminRepository.findByEmailAndPassword(email, password);
     }
 }
