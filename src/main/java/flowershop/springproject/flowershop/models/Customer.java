@@ -23,7 +23,7 @@ public class Customer {
     
     private String password;
     private String address;
-    private Boolean premium;
+    private Boolean premium = false;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
     private Set<Order> orders = new HashSet<>();
@@ -31,13 +31,12 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String firstName, String lastName, String email, String password, String address, Boolean premium) {
+    public Customer(String firstName, String lastName, String email, String password, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.address = address;
-        this.premium = premium;
     }
 
     public Long getId() {

@@ -1,22 +1,32 @@
 package flowershop.springproject.flowershop.restcontrollers;
 
-import flowershop.springproject.flowershop.businessLogic.LoginLogic;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import flowershop.springproject.flowershop.models.Admin;
+import flowershop.springproject.flowershop.models.Customer;
+import flowershop.springproject.flowershop.services.AdminService;
+import flowershop.springproject.flowershop.services.CustomerService;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class LoginRestController {
     
-    private final LoginLogic loginLogic;
+    private final AdminService adminService;
+    private final CustomerService customerService;
 
-    public LoginRestController(LoginLogic loginLogic) {
-        this.loginLogic = loginLogic;
+    public LoginRestController(AdminService adminService, CustomerService customerService) {
+        this.adminService = adminService;
+        this.customerService = customerService;
     }
     
-    @GetMapping("login")
-    private Object login(@RequestParam(value="email") String email,
-                         @RequestParam(value="password") String password) {
-        return loginLogic.checkUserType(email, password);
+    @GetMapping("customerLogin")
+    private Customer customerLogin(@RequestParam(value="email") String email,
+                           @RequestParam(value="password") String password){
+        return customerService.getCustomerByEmailAndPassword(email, password);
+    }
+
+    @GetMapping("adminLogin")
+    private Admin adminLogin(@RequestParam(value="email") String email,
+                             @RequestParam(value="password") String password){
+        return adminService.getAdminByEmailAndPassword(email, password);
     }
 }

@@ -8,6 +8,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/customer")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CustomerRestController {
     
     private final CustomerService customerService;
