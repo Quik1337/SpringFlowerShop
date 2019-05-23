@@ -1,9 +1,5 @@
 package flowershop.springproject.flowershop.restmodels;
 
-import flowershop.springproject.flowershop.models.Customer;
-import flowershop.springproject.flowershop.models.OrderDetail;
-
-import java.util.HashSet;
 import java.util.Set;
 
 public class RestCustomerOrder {

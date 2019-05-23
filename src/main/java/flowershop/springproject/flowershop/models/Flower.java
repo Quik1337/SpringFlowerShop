@@ -8,7 +8,6 @@ import java.math.BigDecimal;
 @Table(name = "flower")
 public class Flower {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,6 +15,7 @@ public class Flower {
     private String name;
     private String description;
     private BigDecimal price;
+    
     @Column(name = "PICTUREURL")
     private String pictureUrl;
 

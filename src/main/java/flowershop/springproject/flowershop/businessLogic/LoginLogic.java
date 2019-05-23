@@ -18,7 +18,7 @@ public class LoginLogic {
     }
     
     public Object checkUserType(String email, String password) {
-        Customer customer = customerService.findByEmailAndPassword(email, password);
+        Customer customer = customerService.getByEmailAndPassword(email, password);
         Admin admin = adminService.getAdminByEmailAndPassword(email, password);
         
         if(customer != null) {

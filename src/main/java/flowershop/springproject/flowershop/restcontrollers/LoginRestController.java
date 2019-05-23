@@ -16,7 +16,7 @@ public class LoginRestController {
     
     @GetMapping("login")
     private Object login(@RequestParam(value="email") String email,
-                         @RequestParam(value="password") String password){
+                         @RequestParam(value="password") String password) {
         return loginLogic.checkUserType(email, password);
     }
 }

@@ -14,10 +14,13 @@ public class Customer {
 
     @Column(name = "FIRSTNAME")
     private String firstName;
+    
     @Column(name = "LASTNAME")
     private String lastName;
-    @Column(unique=true)
+    
+    @Column(unique = true)
     private String email;
+    
     private String password;
     private String address;
     private Boolean premium;
@@ -36,8 +39,6 @@ public class Customer {
         this.address = address;
         this.premium = premium;
     }
-
-
 
     public Long getId() {
         return id;

@@ -28,7 +28,7 @@ public class CustomerService implements CrudService<Customer> {
         return customers;
     }
 
-    public Customer findByEmailAndPassword(String email, String password){
+    public Customer getByEmailAndPassword(String email, String password) {
         return customerRepository.findByEmailAndPassword(email, password);
     }
 
