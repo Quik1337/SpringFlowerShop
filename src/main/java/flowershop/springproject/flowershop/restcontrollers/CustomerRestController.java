@@ -10,7 +10,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/customer")
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CustomerRestController {
     
     private final CustomerService customerService;

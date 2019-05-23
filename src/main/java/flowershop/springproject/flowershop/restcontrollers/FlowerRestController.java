@@ -8,7 +8,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/flower")
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class FlowerRestController {
 
     private final FlowerService flowerService;

@@ -7,7 +7,7 @@ import flowershop.springproject.flowershop.services.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class LoginRestController {
     
     private final AdminService adminService;
