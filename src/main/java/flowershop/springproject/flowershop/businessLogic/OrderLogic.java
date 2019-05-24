@@ -29,15 +29,10 @@ public class OrderLogic {
         Order order = new Order();
         Set<OrderDetail> orderDetails = new HashSet<>();
         restOrderDetails.stream()
-<<<<<<< HEAD
                 .forEach(e -> orderDetails
                         .add(new OrderDetail(order, flowerService.getById(e.getFlowerId()), e.getQuantity())));
 
-=======
-                        .forEach(e -> orderDetails
-                        .add(new OrderDetail(order, flowerService.getById(e.getFlowerId()), e.getQuantity())));
-        
->>>>>>> a2bce46ecb9c5adc74b68acad6a8ae7b38d2431e
+
         order.setOrderDetails(orderDetails);
         order.setCustomer(customer);
         order.setOrderDate(LocalDate.now());
