@@ -19,8 +19,7 @@ public class FlowerRestController {
 
 
     @GetMapping("getAllFlowers")
-    public @ResponseBody Set<Flower> getAllFlowers(){
+    public Set<Flower> getAllFlowers(){
         return flowerService.getAll();
     }
-
 }

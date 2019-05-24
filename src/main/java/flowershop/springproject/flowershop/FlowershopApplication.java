@@ -14,6 +14,4 @@ public class FlowershopApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext cmx  = SpringApplication.run(FlowershopApplication.class, args);
 	}
-
-
 }

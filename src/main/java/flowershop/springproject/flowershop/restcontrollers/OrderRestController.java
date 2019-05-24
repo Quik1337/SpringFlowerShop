@@ -20,18 +20,16 @@ public class OrderRestController {
     }
     
     @PostMapping("createOrder")
-    public @ResponseBody String createOrder(@RequestBody RestCustomerOrder restCustomerOrder) {
-
+    public String createOrder(@RequestBody RestCustomerOrder restCustomerOrder) {
         return orderLogic.addOrder(restCustomerOrder);
     }
 
     @PostMapping("createOrderTest")
-    public @ResponseBody String createOrderTest(@RequestBody RestCustomerOrder restCustomerOrder) {
-
+    public String createOrderTest(@RequestBody RestCustomerOrder restCustomerOrder) {
         return orderLogic.addOrder(restCustomerOrder);
     }
 
-    @GetMapping("createOrder")
+    @GetMapping("createOrderForCustomer")
     public String createOrdersForCustomer() {
 
         RestCustomerOrder restCustomerOrder = new RestCustomerOrder();

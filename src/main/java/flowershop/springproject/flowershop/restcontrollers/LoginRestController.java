@@ -19,14 +19,14 @@ public class LoginRestController {
     }
     
     @GetMapping("customerLogin")
-    private Customer login(@RequestParam(value="email") String email,
+    private Customer customerLogin(@RequestParam(value="email") String email,
                            @RequestParam(value="password") String password){
-        return customerService.findByEmailAndPassword(email, password);
+        return customerService.getCustomerByEmailAndPassword(email, password);
     }
 
     @GetMapping("adminLogin")
     private Admin adminLogin(@RequestParam(value="email") String email,
                              @RequestParam(value="password") String password){
-        return adminService.findByEmailAndPassword(email, password);
+        return adminService.getAdminByEmailAndPassword(email, password);
     }
 }

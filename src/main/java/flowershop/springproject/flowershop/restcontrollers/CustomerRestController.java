@@ -6,7 +6,6 @@ import flowershop.springproject.flowershop.models.Order;
 import flowershop.springproject.flowershop.models.OrderDetail;
 import flowershop.springproject.flowershop.services.AdminService;
 import flowershop.springproject.flowershop.services.CustomerService;
-import flowershop.springproject.flowershop.services.FlowerService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -32,7 +31,4 @@ public class CustomerRestController {
     private Customer customer(@Valid @RequestBody Customer customer){
         return customerService.add(customer);
     }
-
-    
 }
-

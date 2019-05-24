@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "orderdetail")
 public class OrderDetail {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,5 +57,4 @@ public class OrderDetail {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
-
 }

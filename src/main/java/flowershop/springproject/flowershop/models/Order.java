@@ -4,15 +4,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "\"Order\"")
+@Table(name = "\"order\"")
 public class Order {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +26,6 @@ public class Order {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "order")
     private Set<OrderDetail> orderDetails = new HashSet<>();
-
 
     public Order() {
     }
@@ -76,4 +73,3 @@ public class Order {
         this.orderDetails = orderDetails;
     }
 }
-
