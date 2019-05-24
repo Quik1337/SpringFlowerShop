@@ -24,7 +24,7 @@ public class OrderLogic {
         this.customerService = customerService;
         this.flowerService = flowerService;
     }
-    
+
     public String addOrder(RestCustomerOrder restCustomerOrder) {
 
         Customer customer = customerService.getById(restCustomerOrder.getCustomerId());
@@ -33,15 +33,15 @@ public class OrderLogic {
         Set<OrderDetail> orderDetails = new HashSet<>();
         restOrderDetails.stream()
                 .forEach(e -> orderDetails
-                .add(new OrderDetail(order, flowerService.getById(e.getFlowerId()), e.getQuantity())));
-        
+                        .add(new OrderDetail(order, flowerService.getById(e.getFlowerId()), e.getQuantity())));
+
         order.setOrderDetails(orderDetails);
         order.setCustomer(customer);
         order.setOrderDate(LocalDate.now());
         order.setTotalPrice(orderDetails);
         customer.getOrders().add(order);
         customerService.add(customer);
-        
+
         return "ok";
     }
 }

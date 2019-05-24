@@ -1,11 +1,15 @@
 package flowershop.springproject.flowershop.restcontrollers;
 
 import flowershop.springproject.flowershop.models.Customer;
+import flowershop.springproject.flowershop.models.Flower;
+import flowershop.springproject.flowershop.models.Order;
+import flowershop.springproject.flowershop.models.OrderDetail;
 import flowershop.springproject.flowershop.services.AdminService;
 import flowershop.springproject.flowershop.services.CustomerService;
 import flowershop.springproject.flowershop.services.FlowerService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.Set;
 
 @RestController
@@ -25,7 +29,7 @@ public class CustomerRestController {
     }
     
     @PostMapping("createCustomer")
-    private Customer customer(@RequestBody Customer customer){
+    private Customer customer(@Valid @RequestBody Customer customer){
         return customerService.add(customer);
     }
 

@@ -1,5 +1,7 @@
 package flowershop.springproject.flowershop.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,7 @@ public class OrderDetail {
     private Long id;
 
     @ManyToOne
+    @JsonIgnore
     private Order order;
 
     @OneToOne

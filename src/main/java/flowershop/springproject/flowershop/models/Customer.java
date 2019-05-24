@@ -1,6 +1,7 @@
 package flowershop.springproject.flowershop.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,13 +13,18 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "firstName is mandatory")
     @Column(name = "FIRSTNAME")
     private String firstName;
+    @NotBlank(message = "lastName is mandatory")
     @Column(name = "LASTNAME")
     private String lastName;
     @Column(unique=true)
+    @NotBlank(message = "email is mandatory")
     private String email;
+    @NotBlank(message = "password is mandatory")
     private String password;
+    @NotBlank(message = "Address is mandatory")
     private String address;
     private Boolean premium = false;
 
