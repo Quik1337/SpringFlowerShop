@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
@@ -53,8 +54,13 @@ public class Order {
     }
 
     public void setTotalPrice(Set<OrderDetail> orderDetails) {
-        this.totalPrice = new BigDecimal(orderDetails.stream()
+        BigDecimal orderCost = new BigDecimal(orderDetails.stream()
                 .map(e -> e.getFlower().getPrice().multiply(new BigDecimal(e.getQuantity()))).mapToDouble(BigDecimal::doubleValue).sum());
+
+        if(this.customer.getPremium()){
+            orderCost = orderCost.multiply(new BigDecimal("0.90"), new MathContext(4));
+        }
+        this.totalPrice = orderCost;
     }
 
     public LocalDate getOrderDate() {
