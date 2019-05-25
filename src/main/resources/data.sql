@@ -25,7 +25,7 @@ INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
 VALUES('Charmfull Orkide', 'Beutiful flower that comes with round and crispy leafs, this flower can also be ' ||
   'eaten if you have a month with not so much money', 150, 'CharmfullOrkide.jpg');
 INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
-VALUES('Eukalyptus', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300, 'Eukalyptus.jpg');
+VALUES('Eukalyptus', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300.123123, 'Eukalyptus.jpg');
 INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)
 VALUES('Gron skonhet', 'Beutiful rose in red and yellow, perfect as a gift to your loved one', 300, 'GronSkonhet.jpg');
 INSERT INTO Flower(NAME, DESCRIPTION, PRICE, PICTUREURL)

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
@@ -58,7 +59,7 @@ public class Order {
                 .map(e -> e.getFlower().getPrice().multiply(new BigDecimal(e.getQuantity()))).mapToDouble(BigDecimal::doubleValue).sum());
 
         if(this.customer.getPremium()){
-            orderCost = orderCost.multiply(new BigDecimal("0.90"), new MathContext(4));
+            orderCost = orderCost.multiply(new BigDecimal("0.90")).setScale(2, RoundingMode.CEILING);
         }
         this.totalPrice = orderCost;
     }
