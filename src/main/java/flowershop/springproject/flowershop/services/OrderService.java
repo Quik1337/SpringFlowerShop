@@ -4,7 +4,6 @@ import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.models.Order;
 import flowershop.springproject.flowershop.repositories.OrderRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,7 +1,6 @@
 package flowershop.springproject.flowershop.services;
 
 import flowershop.springproject.flowershop.models.Admin;
-import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.repositories.AdminRepository;
 import org.springframework.stereotype.Service;
 import java.util.HashSet;

@@ -23,11 +23,11 @@ public class Order {
     @JsonIgnore
     private Customer customer;
 
-    private BigDecimal totalPrice;
-    private LocalDate orderDate;
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "order")
     private Set<OrderDetail> orderDetails = new HashSet<>();
+
+    private BigDecimal totalPrice;
+    private LocalDate orderDate;
 
     public Order() {
     }

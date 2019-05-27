@@ -1,13 +1,8 @@
 package flowershop.springproject.flowershop.restcontrollers;
 
 import flowershop.springproject.flowershop.models.Customer;
-import flowershop.springproject.flowershop.models.Flower;
-import flowershop.springproject.flowershop.models.Order;
-import flowershop.springproject.flowershop.models.OrderDetail;
-import flowershop.springproject.flowershop.services.AdminService;
 import flowershop.springproject.flowershop.services.CustomerService;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.Set;
 

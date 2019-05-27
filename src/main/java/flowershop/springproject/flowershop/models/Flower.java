@@ -12,12 +12,13 @@ public class Flower {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "PICTUREURL")
+    private String pictureUrl;
+
     private String name;
     private String description;
     private BigDecimal price;
-    
-    @Column(name = "PICTUREURL")
-    private String pictureUrl;
+
 
     public Flower() {
     }

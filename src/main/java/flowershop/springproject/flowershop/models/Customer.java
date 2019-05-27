@@ -16,16 +16,21 @@ public class Customer {
     @NotBlank(message = "firstName is mandatory")
     @Column(name = "FIRSTNAME")
     private String firstName;
+
     @NotBlank(message = "lastName is mandatory")
     @Column(name = "LASTNAME")
     private String lastName;
+
     @Column(unique=true)
     @NotBlank(message = "email is mandatory")
     private String email;
+
     @NotBlank(message = "password is mandatory")
     private String password;
+
     @NotBlank(message = "Address is mandatory")
     private String address;
+
     private Boolean premium = false;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")

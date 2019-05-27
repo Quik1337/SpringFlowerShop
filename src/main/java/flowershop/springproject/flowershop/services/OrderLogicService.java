@@ -5,9 +5,6 @@ import flowershop.springproject.flowershop.models.Order;
 import flowershop.springproject.flowershop.models.OrderDetail;
 import flowershop.springproject.flowershop.restmodels.RestCustomerOrder;
 import flowershop.springproject.flowershop.restmodels.RestOrderDetail;
-import flowershop.springproject.flowershop.services.CustomerService;
-import flowershop.springproject.flowershop.services.FlowerService;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.HashSet;

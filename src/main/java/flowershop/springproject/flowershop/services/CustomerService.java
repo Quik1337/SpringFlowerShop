@@ -3,7 +3,6 @@ package flowershop.springproject.flowershop.services;
 import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.repositories.CustomerRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.HashSet;
 import java.util.Set;
 
