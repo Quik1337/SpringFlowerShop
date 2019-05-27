@@ -3,6 +3,7 @@ package flowershop.springproject.flowershop.restcontrollers;
 import flowershop.springproject.flowershop.services.OrderLogicService;
 import flowershop.springproject.flowershop.restmodels.RestCustomerOrder;
 import flowershop.springproject.flowershop.restmodels.RestOrderDetail;
+import flowershop.springproject.flowershop.services.OrderResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,17 +23,17 @@ public class OrderRestController {
     }
     
     @PostMapping("createOrder")
-    public Boolean createOrder(@RequestBody RestCustomerOrder restCustomerOrder) {
+    public OrderResponse createOrder(@RequestBody RestCustomerOrder restCustomerOrder) {
         return orderLogicService.addOrder(restCustomerOrder);
     }
 
     @PostMapping("createOrderTest")
-    public Boolean createOrderTest(@RequestBody RestCustomerOrder restCustomerOrder) {
+    public OrderResponse createOrderTest(@RequestBody RestCustomerOrder restCustomerOrder) {
         return orderLogicService.addOrder(restCustomerOrder);
     }
 
     @GetMapping("createOrderForCustomer")
-    public Boolean createOrdersForCustomer() {
+    public OrderResponse createOrdersForCustomer() {
 
         RestCustomerOrder restCustomerOrder = new RestCustomerOrder();
         restCustomerOrder.setCustomerId(1L);

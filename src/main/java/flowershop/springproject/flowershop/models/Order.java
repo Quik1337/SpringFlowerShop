@@ -55,6 +55,7 @@ public class Order {
     }
 
     public void setTotalPrice(Set<OrderDetail> orderDetails) {
+        
         BigDecimal orderCost = new BigDecimal(orderDetails.stream()
                 .map(e -> e.getFlower().getPrice().multiply(new BigDecimal(e.getQuantity()))).mapToDouble(BigDecimal::doubleValue).sum());
 

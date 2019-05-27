@@ -28,7 +28,7 @@ public class OrderLogicService {
         this.orderService = orderService;
     }
 
-    public Boolean addOrder(RestCustomerOrder restCustomerOrder) {
+    public OrderResponse addOrder(RestCustomerOrder restCustomerOrder) {
         Customer customer = customerService.getById(restCustomerOrder.getCustomerId());
         Set<RestOrderDetail> restOrderDetails = restCustomerOrder.getRestOrderDetails();
         Order order = new Order();
@@ -46,7 +46,7 @@ public class OrderLogicService {
         updatePremiumStatus(orderDetails, customer);
         customerService.add(customer);
 
-        return customer.getPremium();
+        return new OrderResponse(customer.getPremium());
     }
 
     public void updatePremiumStatus(Set<OrderDetail> orderDetails, Customer customer){

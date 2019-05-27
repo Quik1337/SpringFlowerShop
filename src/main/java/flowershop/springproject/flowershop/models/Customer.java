@@ -13,22 +13,22 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "firstName is mandatory")
+//    @NotBlank(message = "firstName is mandatory")
     @Column(name = "FIRSTNAME")
     private String firstName;
 
-    @NotBlank(message = "lastName is mandatory")
+//    @NotBlank(message = "lastName is mandatory")
     @Column(name = "LASTNAME")
     private String lastName;
 
     @Column(unique=true)
-    @NotBlank(message = "email is mandatory")
+//    @NotBlank(message = "email is mandatory")
     private String email;
 
-    @NotBlank(message = "password is mandatory")
+//    @NotBlank(message = "password is mandatory")
     private String password;
 
-    @NotBlank(message = "Address is mandatory")
+//    @NotBlank(message = "Address is mandatory")
     private String address;
 
     private Boolean premium = false;
