@@ -21,4 +21,9 @@ public class FlowerRestController {
     public Set<Flower> getAllFlowers(){
         return flowerService.getAll();
     }
+
+    @GetMapping("getAllPremiumFlowers")
+    public Set<Flower> getAllPremiumFlowers(){
+        return flowerService.getPremiumFlowers();
+    }
 }

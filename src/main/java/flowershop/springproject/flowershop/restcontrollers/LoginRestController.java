@@ -4,6 +4,7 @@ import flowershop.springproject.flowershop.models.Admin;
 import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.services.AdminService;
 import flowershop.springproject.flowershop.services.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,6 +14,7 @@ public class LoginRestController {
     private final AdminService adminService;
     private final CustomerService customerService;
 
+    @Autowired
     public LoginRestController(AdminService adminService, CustomerService customerService) {
         this.adminService = adminService;
         this.customerService = customerService;

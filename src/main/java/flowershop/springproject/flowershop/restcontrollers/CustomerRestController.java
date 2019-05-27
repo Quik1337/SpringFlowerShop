@@ -2,6 +2,7 @@ package flowershop.springproject.flowershop.restcontrollers;
 
 import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.services.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.Set;
@@ -13,6 +14,7 @@ public class CustomerRestController {
     
     private final CustomerService customerService;
 
+    @Autowired
     public CustomerRestController(CustomerService customerService) {
         this.customerService = customerService;
     }

@@ -2,6 +2,7 @@ package flowershop.springproject.flowershop.services;
 
 import flowershop.springproject.flowershop.models.Admin;
 import flowershop.springproject.flowershop.repositories.AdminRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,6 +12,7 @@ public class AdminService implements CrudService<Admin> {
 
     private final AdminRepository adminRepository;
 
+    @Autowired
     public AdminService(AdminRepository adminRepository) {
         this.adminRepository = adminRepository;
     }

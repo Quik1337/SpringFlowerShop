@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,13 +20,15 @@ public class OrderLogicService {
     private final FlowerService flowerService;
     private final OrderService orderService;
 
+
+    @Autowired
     public OrderLogicService(CustomerService customerService, FlowerService flowerService, OrderService orderService) {
         this.customerService = customerService;
         this.flowerService = flowerService;
         this.orderService = orderService;
     }
 
-    public String addOrder(RestCustomerOrder restCustomerOrder) {
+    public Boolean addOrder(RestCustomerOrder restCustomerOrder) {
         Customer customer = customerService.getById(restCustomerOrder.getCustomerId());
         Set<RestOrderDetail> restOrderDetails = restCustomerOrder.getRestOrderDetails();
         Order order = new Order();
@@ -43,7 +46,7 @@ public class OrderLogicService {
         updatePremiumStatus(orderDetails, customer);
         customerService.add(customer);
 
-        return "ok";
+        return customer.getPremium();
     }
 
     public void updatePremiumStatus(Set<OrderDetail> orderDetails, Customer customer){

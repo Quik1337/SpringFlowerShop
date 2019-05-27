@@ -2,6 +2,7 @@ package flowershop.springproject.flowershop.services;
 
 import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.repositories.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,6 +12,7 @@ public class CustomerService implements CrudService<Customer> {
 
     private final CustomerRepository customerRepository;
 
+    @Autowired
     public CustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
