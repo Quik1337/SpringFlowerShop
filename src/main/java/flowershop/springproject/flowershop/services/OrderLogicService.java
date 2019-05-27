@@ -1,4 +1,4 @@
-package flowershop.springproject.flowershop.businessLogic;
+package flowershop.springproject.flowershop.services;
 
 import flowershop.springproject.flowershop.models.Customer;
 import flowershop.springproject.flowershop.models.Order;
@@ -13,17 +13,16 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-import flowershop.springproject.flowershop.services.OrderService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OrderLogic {
+public class OrderLogicService {
     
     private final CustomerService customerService;
     private final FlowerService flowerService;
     private final OrderService orderService;
 
-    public OrderLogic(CustomerService customerService, FlowerService flowerService, OrderService orderService) {
+    public OrderLogicService(CustomerService customerService, FlowerService flowerService, OrderService orderService) {
         this.customerService = customerService;
         this.flowerService = flowerService;
         this.orderService = orderService;
